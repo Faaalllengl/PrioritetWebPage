@@ -1,0 +1,81 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local editors and workspace settings
+.idea/
+.vscode/
+.obsidian/
+.codex/
+.claude/
+.mcp.json
+
+# Repowise local index and caches
+.repowise/
+
+# Python bytecode, environments, caches, and test output
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# JavaScript dependencies and package-manager caches
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build, bundler, and framework output
+dist/
+build/
+out/
+coverage/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# Local environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.sqlite
+*.sqlite3
+
+# Logs, temporary files, and editor swap files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Video assets kept outside the Git repository
+*.mp4
+*.webm
+*.mov
+*.m4v
+*.avi

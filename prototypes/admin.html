@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Локальное управление видео и фотографиями карусели ДСК «Приоритет». ">
+  <title>Управление каруселью — ДСК «Приоритет»</title>
+  <link rel="stylesheet" href="admin.css?v=20261007-1">
+</head>
+<body>
+  <header class="admin-header">
+    <a class="admin-brand" href="prototype-home.html" aria-label="Вернуться на главную">
+      <span class="admin-brand__mark" aria-hidden="true">П</span>
+      <span><strong>ДСК «Приоритет»</strong><small>локальная панель контента</small></span>
+    </a>
+    <a class="admin-back" href="prototype-home.html#projects">Открыть карусель <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="admin-shell">
+    <div class="admin-intro">
+      <div>
+        <span class="admin-kicker">Последние события</span>
+        <h1>Управление каруселью</h1>
+      </div>
+      <p>Добавляйте видео или фото, задавайте заголовок и описания. Порядок карточек меняется кнопками в библиотеке.</p>
+    </div>
+
+    <div class="admin-layout">
+      <section class="editor-panel" aria-labelledby="editor-title">
+        <div class="panel-heading">
+          <div><span class="panel-index">01</span><h2 id="editor-title">Карточка материала</h2></div>
+          <button class="button button--quiet" type="button" id="reset-form">Новая карточка</button>
+        </div>
+
+        <form id="project-form" novalidate>
+          <input type="hidden" id="project-id">
+
+          <fieldset class="form-section">
+            <legend>Медиафайл</legend>
+            <div class="form-grid form-grid--compact">
+              <label>
+                <span>Тип материала</span>
+                <select id="media-type">
+                  <option value="video">Видео</option>
+                  <option value="image">Фотография</option>
+                </select>
+              </label>
+              <label>
+                <span>Новый файл</span>
+                <input id="media-file" type="file" accept="video/mp4,video/webm,video/quicktime,image/jpeg,image/png,image/webp,image/avif">
+              </label>
+            </div>
+            <p class="field-hint" id="media-hint">Видео: MP4, WebM или MOV. Максимальный размер — 512 МБ.</p>
+            <div class="current-media" id="current-media" hidden></div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Подпись</legend>
+            <label>
+              <span>Заголовок карточки</span>
+              <input id="project-title" type="text" maxlength="140" required placeholder="Например: Укладка покрытия на объекте">
+            </label>
+            <label>
+              <span>Описание для доступности</span>
+              <input id="project-alt" type="text" maxlength="180" placeholder="Что изображено на видео или фотографии">
+            </label>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Описание</legend>
+            <p class="field-hint">Разделяйте абзацы пустой строкой. Если язык не нужен, оставьте поле пустым.</p>
+            <label>
+              <span>Қазақша</span>
+              <textarea id="project-kz" rows="8" placeholder="Текст на казахском языке"></textarea>
+            </label>
+            <label>
+              <span>Русский</span>
+              <textarea id="project-ru" rows="8" placeholder="Текст на русском языке"></textarea>
+            </label>
+          </fieldset>
+
+          <label class="publish-toggle">
+            <input id="project-published" type="checkbox" checked>
+            <span><strong>Показывать в карусели</strong><small>Снимите галочку, если хотите сохранить карточку, но временно скрыть её.</small></span>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">Сохранить карточку</button>
+            <button class="button button--quiet" type="button" id="cancel-edit" hidden>Отменить редактирование</button>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="library-panel" aria-labelledby="library-title">
+        <div class="panel-heading">
+          <div><span class="panel-index">02</span><h2 id="library-title">Библиотека</h2></div>
+          <span class="item-count" id="item-count">0 карточек</span>
+        </div>
+        <div class="project-list-admin" id="project-list-admin" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
