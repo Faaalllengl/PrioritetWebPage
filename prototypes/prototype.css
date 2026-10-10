@@ -109,10 +109,9 @@ h3 { margin-bottom: 12px; font-size: clamp(22px, 2.6vw, 32px); }
   min-height: 80px;
   gap: 24px;
 }
-.brand { display: inline-flex; align-items: center; gap: 12px; min-width: 200px; }
-.brand-mark { display: block; width: 40px; height: 40px; flex: 0 0 40px; }
-.brand-name { display: grid; gap: 1px; font-family: "Commissioner", sans-serif; font-size: 13px; font-weight: 800; line-height: 1; letter-spacing: .05em; text-transform: uppercase; }
-.brand-name small { color: #a9a2a5; font-family: "Golos Text", sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .14em; }
+.brand { display: inline-flex; align-items: center; gap: 10px; min-width: 220px; }
+.brand-logo { display: block; width: 126px; height: 68px; flex: 0 0 126px; object-fit: contain; object-position: left center; }
+.brand-context { display: block; max-width: 105px; color: #a9a2a5; font-family: "Golos Text", sans-serif; font-size: 10px; font-weight: 500; line-height: 1.25; letter-spacing: .11em; text-transform: uppercase; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { position: relative; padding: 12px 0; color: #cec7c9; font-size: 14px; transition: color .2s var(--ease); }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: white; }
@@ -359,9 +358,8 @@ h3 { margin-bottom: 12px; font-size: clamp(22px, 2.6vw, 32px); }
   .section--tight { padding: 58px 0; }
   .nav { min-height: 70px; }
   .brand { min-width: 0; }
-  .brand-mark { width: 36px; height: 36px; flex-basis: 36px; }
-  .brand-name { font-size: 11px; }
-  .brand-name small { font-size: 8px; }
+  .brand-logo { width: 108px; height: 58px; flex-basis: 108px; }
+  .brand-context { max-width: 82px; font-size: 8px; }
   h1 { font-size: clamp(42px, 13vw, 64px); }
   h2 { font-size: clamp(34px, 11vw, 50px); }
   .hero { min-height: 710px; }
@@ -441,8 +439,7 @@ h1, h2, h3 { letter-spacing: -.07em; }
 .site-header { transition: transform .28s var(--ease); }
 .nav { min-height: 80px; }
 .brand { min-width: 220px; }
-.brand-name { color: var(--ink); letter-spacing: .08em; }
-.brand-name small { color: var(--muted); }
+.brand-context { color: var(--muted); }
 .nav-links { gap: 22px; }
 .nav-links a { color: var(--muted); font-size: 13px; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--ink); }

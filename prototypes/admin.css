@@ -35,9 +35,8 @@ a { color: inherit; }
 
 .admin-brand, .admin-back { text-decoration: none; }
 .admin-brand { display: inline-flex; align-items: center; gap: 12px; }
-.admin-brand__mark { width: 36px; height: 36px; display: grid; place-items: center; color: white; background: var(--admin-red); font-weight: 700; }
+.admin-brand__logo { display: block; width: 104px; height: 56px; object-fit: contain; object-position: left center; }
 .admin-brand strong, .admin-brand small { display: block; }
-.admin-brand strong { letter-spacing: .08em; font-size: 13px; text-transform: uppercase; }
 .admin-brand small { margin-top: 2px; color: var(--admin-muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .admin-back { color: var(--admin-green); font-size: 13px; font-weight: 700; }
 .admin-back:hover { color: var(--admin-red); }
