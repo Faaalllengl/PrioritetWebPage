@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const revealSelector = [
     '.section-head', '.trust-item', '.capability-card', '.project-card',
-    '.quality-layout > *', '.story > *', '.award', '.final-cta .container > *'
+    '.story > *', '.award', '.final-cta .container > *'
   ].join(',');
   const heroSelector = '.hero__inner > *, .hero__visual > *, .hero__bottom > *';
 

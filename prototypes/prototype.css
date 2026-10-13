@@ -240,18 +240,6 @@ h3 { margin-bottom: 12px; font-size: clamp(22px, 2.6vw, 32px); }
 .scroller-button { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--line-dark); border-radius: 50%; color: white; background: transparent; transition: background-color .2s var(--ease), border-color .2s var(--ease); }
 .scroller-button:hover { border-color: var(--red); background: var(--red); }
 
-.quality-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: center; }
-.quality-art { position: relative; min-height: 460px; overflow: hidden; border-radius: var(--radius-lg); background: var(--surface-dark); }
-.quality-art::before { content: ""; position: absolute; inset: 14% 10%; border: 1px solid rgba(255,255,255,.18); transform: skewY(-12deg); }
-.quality-art::after { content: ""; position: absolute; left: -15%; right: -15%; top: 50%; height: 2px; background: var(--red); box-shadow: 0 -42px 0 rgba(217,40,49,.28), 0 42px 0 rgba(217,40,49,.15); transform: rotate(-12deg); }
-.quality-stamp { position: absolute; right: 32px; bottom: 30px; width: 112px; height: 112px; display: grid; place-items: center; border: 1px solid var(--red); border-radius: 50%; color: #f58b8f; font-family: "Commissioner", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-align: center; text-transform: uppercase; transform: rotate(12deg); }
-.quality-list { display: grid; gap: 0; margin-top: 34px; }
-.quality-step { display: grid; grid-template-columns: 44px 1fr; gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); }
-.quality-step:first-child { border-top: 2px solid var(--red); }
-.quality-step__number { color: var(--red); font-family: "Commissioner", sans-serif; font-size: 13px; font-weight: 700; }
-.quality-step h3 { margin-bottom: 5px; font-size: 20px; }
-.quality-step p { margin: 0; color: var(--muted); font-size: 14px; }
-
 .story { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: center; }
 .portrait-card { position: relative; min-height: 560px; margin: 0; overflow: hidden; border-radius: var(--radius-lg); background: #bdb5ae; }
 .portrait-card::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 52%, rgba(24,23,25,.72) 100%); }
@@ -343,8 +331,7 @@ h3 { margin-bottom: 12px; font-size: clamp(22px, 2.6vw, 32px); }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .trust-item:nth-child(2) { border-right: 0; }
   .capability-grid { grid-template-columns: repeat(2, 1fr); }
-  .quality-layout, .story, .lab-intro { grid-template-columns: 1fr; gap: 42px; }
-  .quality-art { min-height: 360px; }
+  .story, .lab-intro { grid-template-columns: 1fr; gap: 42px; }
   .portrait-card { min-height: 420px; }
   .award, .lab-cta { grid-template-columns: 1fr; padding: 42px; }
   .award__seal { min-height: 150px; }
@@ -382,7 +369,6 @@ h3 { margin-bottom: 12px; font-size: clamp(22px, 2.6vw, 32px); }
 .project-card h3 { font-size: 27px; }
 .project-card__copy { gap: 18px; margin: 24px 0; }
 .project-card__copy p { font-size: 15px; }
-  .quality-art { min-height: 275px; }
   .portrait-card { min-height: 330px; }
   .story-quote { padding-left: 16px; font-size: 24px; }
   .award, .lab-cta { padding: 30px 22px; }
@@ -496,11 +482,8 @@ h1, h2, h3 { letter-spacing: -.07em; }
 .project-card__copy-block { border-top-color: rgba(255,255,255,.25); }
 .scroller-button { border-radius: 0; }
 .scroller-button:hover { border-color: var(--red); background: var(--red); color: white; }
-.quality-art, .portrait-card { border-radius: 0; }
-.quality-art::after { background: var(--red); box-shadow: 0 -42px 0 rgba(217,40,49,.28), 0 42px 0 rgba(217,40,49,.15); }
-.quality-stamp { border-color: var(--red); color: #ff969a; border-radius: 50%; }
-.quality-step:first-child { border-top-color: var(--red); }
-.quality-step__number, .timeline-item time { color: var(--green); }
+.portrait-card { border-radius: 0; }
+.timeline-item time { color: var(--green); }
 .story-quote { border-left-color: var(--red); }
 .award { border-radius: 0; background: var(--green); }
 .award p { color: #d4e5dc; }
